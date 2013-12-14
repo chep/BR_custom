@@ -2,7 +2,7 @@
 
 ####DO_NOT_TOUCH####
 
-VERSION=2013.08
+VERSION=2013.11
 NAME=buildroot-${VERSION}.tar.bz2
 URL=http://buildroot.uclibc.org/downloads/${NAME}
 
