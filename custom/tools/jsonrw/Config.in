@@ -1,0 +1,6 @@
+config BR2_PACKAGE_JSONRW
+	bool "jsonrw"
+	depends on BR2_CUSTOM_TOOLS
+	help
+	  Tools to read/write information from/to json file in shell script
+

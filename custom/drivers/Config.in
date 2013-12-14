@@ -1,0 +1,14 @@
+menu "Drivers"
+
+config BR2_CUSTOM_DRIVERS
+	bool "Add specific drivers for the project"
+	help
+	  Enable this option if you want to add drivers for your embedded device
+
+if BR2_CUSTOM_DRIVERS
+	
+#source "custom/drivers/*/Config.in"
+
+endif # BR2_CUSTOM
+
+endmenu

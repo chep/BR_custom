@@ -1,0 +1,9 @@
+--- a/Config.in	2013-08-31 00:33:13.000000000 +0200
++++ b/Config.in	2013-10-31 11:24:03.618614109 +0100
+@@ -460,4 +460,6 @@
+ 
+ source "package/Config.in.host"
+ 
++source "custom/Config.in"
++
+ source "Config.in.legacy"

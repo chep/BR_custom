@@ -1,0 +1,21 @@
+menu "Custom"
+
+config BR2_CUSTOM
+	bool "Customization for specific project"
+	help
+	  Enable this option if you want to customize buildroot for your 
+	  embedded device
+
+if BR2_CUSTOM
+# Projects
+source "custom/projects/Config.in"
+# Drivers	
+source "custom/drivers/Config.in"
+# Libs
+source "custom/libs/Config.in"
+# Tools
+source "custom/tools/Config.in"
+
+endif # BR2_CUSTOM
+
+endmenu

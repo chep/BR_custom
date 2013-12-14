@@ -1,0 +1,20 @@
+--- a/Makefiel	2013-12-10 10:49:23.971418986 +0100
++++ b/Makefile	2013-12-10 10:50:21.556048939 +0100
+@@ -343,6 +343,8 @@
+ include linux/linux.mk
+ include system/system.mk
+ 
++include custom/custom.mk
++
+ TARGETS+=target-finalize
+ 
+ ifeq ($(BR2_ENABLE_LOCALE_PURGE),y)
+@@ -715,6 +717,8 @@
+ 	@mkdir -p $(BUILD_DIR)/buildroot-config
+ 	@$(COMMON_CONFIG_ENV) $< --defconfig$(if $(DEFCONFIG),=$(DEFCONFIG)) $(CONFIG_CONFIG_IN)
+ 
++include custom/defconfig.mk
++
+ %_defconfig: $(BUILD_DIR)/buildroot-config/conf $(TOPDIR)/configs/%_defconfig outputmakefile
+ 	@mkdir -p $(BUILD_DIR)/buildroot-config
+ 	@$(COMMON_CONFIG_ENV) $< --defconfig=$(TOPDIR)/configs/$@ $(CONFIG_CONFIG_IN)

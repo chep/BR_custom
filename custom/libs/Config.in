@@ -1,0 +1,10 @@
+menu "Libraries"
+
+config BR2_CUSTOM_LIBS
+	bool "Add specific libraries"
+	help
+	  Enable this option if you want to add libraries not integrated to buildroot
+
+source "custom/libs/ecl/Config.in"
+
+endmenu

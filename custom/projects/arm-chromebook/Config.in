@@ -1,0 +1,5 @@
+
+config BR2_CUSTOM_PROJECTS_PUMPV2_OVERLAY
+	bool "pumpv2 overlay"
+	default n
+

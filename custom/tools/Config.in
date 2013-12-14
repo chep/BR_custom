@@ -1,0 +1,10 @@
+menu "Tools"
+
+config BR2_CUSTOM_TOOLS
+	bool "Add specific tools"
+	help
+		Enable this option if you want to add tools not integrated in buildroot
+
+source "custom/tools/jsonrw/Config.in"
+
+endmenu
