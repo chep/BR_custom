@@ -4,7 +4,7 @@
  include linux/linux.mk
  include system/system.mk
  
-+include custom/custom.mk
++include ../custom/custom.mk
 +
  TARGETS+=target-finalize
  
@@ -13,7 +13,7 @@
  	@mkdir -p $(BUILD_DIR)/buildroot-config
  	@$(COMMON_CONFIG_ENV) $< --defconfig$(if $(DEFCONFIG),=$(DEFCONFIG)) $(CONFIG_CONFIG_IN)
  
-+include custom/defconfig.mk
++include ../custom/defconfig.mk
 +
  %_defconfig: $(BUILD_DIR)/buildroot-config/conf $(TOPDIR)/configs/%_defconfig outputmakefile
  	@mkdir -p $(BUILD_DIR)/buildroot-config

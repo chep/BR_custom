@@ -4,6 +4,6 @@
  
  source "package/Config.in.host"
  
-+source "custom/Config.in"
++source "../custom/Config.in"
 +
  source "Config.in.legacy"

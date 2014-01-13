@@ -5,6 +5,9 @@ config BR2_CUSTOM_LIBS
 	help
 	  Enable this option if you want to add libraries not integrated to buildroot
 
-source "custom/libs/ecl/Config.in"
+#Add your libs here
+
+#Example:
+#source "../custom/libs/ecl/Config.in"
 
 endmenu

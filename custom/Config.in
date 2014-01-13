@@ -8,13 +8,13 @@ config BR2_CUSTOM
 
 if BR2_CUSTOM
 # Projects
-source "custom/projects/Config.in"
+source "../custom/projects/Config.in"
 # Drivers	
-source "custom/drivers/Config.in"
+source "../custom/drivers/Config.in"
 # Libs
-source "custom/libs/Config.in"
+source "../custom/libs/Config.in"
 # Tools
-source "custom/tools/Config.in"
+source "../custom/tools/Config.in"
 
 endif # BR2_CUSTOM
 
