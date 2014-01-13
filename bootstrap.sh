@@ -1,7 +1,6 @@
 #!/bin/sh
 
-echo "bootstrap.sh already done" ; exit 0
-
+####DO_NOT_TOUCH####
 
 # if an argument is given, we git clone buildroot and use the argument
 # as the commit where we want to go back in tree
