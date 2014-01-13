@@ -11,5 +11,4 @@ ifeq ($(BR2_CUSTOM_TOOLS),y)
 include ../custom/tools/*/*.mk
 endif
 
-include ../custom/projects/*/*.mk
-
+include ../custom/projects/projects.mk
