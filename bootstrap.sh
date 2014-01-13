@@ -1,6 +1,6 @@
 #!/bin/sh
 
-####DO_NOT_TOUCH####
+echo "bootstrap.sh already done" ; exit 0
 
 
 # if an argument is given, we git clone buildroot and use the argument
@@ -25,7 +25,12 @@ fi
 # patch buildroot
 for p in ../custom/patchs/*.patch
 do
-	patch < $p
+	patch < "$p"
+done
+
+for p in ../custom/patchs/git/*.patch
+do
+	git am "$p"
 done
 
 #back to root directory
