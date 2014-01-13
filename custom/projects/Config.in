@@ -1,13 +1,23 @@
+menu "Project specific configuration"
+	choice
+		prompt "Choose default project"
+        default BR2_CUSTOM_PROJECTS_NONE
+		config BR2_CUSTOM_PROJECTS_NONE
+			bool "None"
 
-choice
-	prompt "Choose default project"
-	default BR2_CUSTOM_PROJECTS_NONE
-config BR2_CUSTOM_PROJECTS_NONE
-	bool "none"
-config BR2_CUSTOM_PROJECTS_ARMCRBK
-	bool "ARM ChromeBook"
-endchoice
+		#add your projects here:
 
-if BR2_CUSTOM_PROJECTS_ARMCRBK
-source "custom/projects/arm-chromebook/Config.in"
-endif
+		#Example:
+		# config BR2_CUSTOM_PROJECTS_ARMCRBK
+		# 	bool "ARM ChromeBook"
+
+	endchoice
+
+	# source Config.in of your projects here
+
+	# Example:
+	# if BR2_CUSTOM_PROJECTS_ARMCRBK
+	# source "../custom/projects/arm-chromebook/Config.in"
+	# endif
+
+endmenu
