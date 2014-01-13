@@ -1,0 +1,4 @@
+$(MAKECMDGOALS):
+	make -C buildroot $(MAKECMDGOALS)
+
+.PHONY: $(MAKECMDGOALS)
